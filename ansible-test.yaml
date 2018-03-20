@@ -1,0 +1,5 @@
+---
+- hosts:
+  tasks:
+  - name: Indicate it has run
+    shell: echo "Test successful" ~/ansible-test-success
