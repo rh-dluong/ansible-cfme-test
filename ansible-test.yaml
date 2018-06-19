@@ -3,3 +3,5 @@
   tasks:
   - name: Indicate it has run
     shell: echo "The extra_var that has been input is {{ test_var }}"
+  - debug:
+      msg: "If the extra_var has been set, this is the message: {{ test_var }}"
