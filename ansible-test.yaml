@@ -1,5 +1,5 @@
 ---
-- hosts:
+- hosts: localhost
   tasks:
   - name: Indicate it has run
-    shell: echo "Test successful" ~/ansible-test-success
+    shell: echo "The extra_var that has been input is {{ test_var }}"
