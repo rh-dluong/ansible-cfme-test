@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+  - name: sleep
+    shell: sleep 60
