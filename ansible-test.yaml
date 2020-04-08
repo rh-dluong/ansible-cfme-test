@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: all
   tasks:
   - name: Indicate it has run
     shell: echo "The extra_var that has been input is {{ test_var }}"
