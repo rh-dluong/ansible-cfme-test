@@ -10,4 +10,4 @@
     register: survey_says
 
   - debug:
-      msg: "Survey says survey_says.stdout"  
+      msg: "Survey says {{ survey_says.stdout}}"  
