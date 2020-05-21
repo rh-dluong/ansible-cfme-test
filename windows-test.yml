@@ -6,5 +6,5 @@
     - ansible_winrm_server_cert_validation: ignore
     - test: "{{ survey }}"
   tasks:
-  - win_command: powershell.exe echo "{{ test }}"
+  - win_command: powershell.exe echo "{{ test }}\\ "
     
