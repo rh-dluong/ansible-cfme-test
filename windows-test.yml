@@ -4,7 +4,7 @@
     - ansible_connection: winrm
     - ansible_winrm_transport: ntlm
     - ansible_winrm_server_cert_validation: ignore
+    - test: !unsafe "{{ survey }}"
   tasks:
-  - set_fact: test="!unsafe {{ survey }}"
   - win_command: echo "{{ test }}"
     
