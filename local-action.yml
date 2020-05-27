@@ -1,0 +1,9 @@
+- name: Run DB Information
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: ls -l
+      become_user: awx
+      local_action:
+        module: shell ls -l 

@@ -1,0 +1,12 @@
+{
+    "company_name": "Super Limited",
+    "contact_email": "user@super.com",
+    "contact_name": "super user",
+    "hostname": "1212121217ff3a2eccf3cb8f",
+    "instance_count": 1000,
+    "license_date": 1504099406,
+    "license_key": "dwefwuwewfhwifehwiohfewiwefi1323r2r32fddfdfdfdd",
+    "license_type": "enterprise",
+    "subscription_name": "Ansible Tower by Red Hat, Standard (1000 Managed Nodes)",
+    "eula_accepted": "True"
+}

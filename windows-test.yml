@@ -6,8 +6,8 @@
     - ansible_winrm_server_cert_validation: ignore
     - test: "{{ survey }}"
   tasks:
-  - win_command: powershell.exe echo "{{ test }}"
-    register: survey_says
+    - win_command: 'powershell.exe echo "{{ test }}\\"'
+      register: survey_says
 
-  - debug:
-      msg: "Survey says {{ survey_says.stdout}}"  
+    - debug:
+        var: test  
