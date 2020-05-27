@@ -1,4 +1,4 @@
-- name: Run DB Information
+- name: local info
   hosts: all
   gather_facts: no
 
@@ -7,3 +7,9 @@
       become_user: awx
       local_action:
         module: shell ls -l 
+
+    - name: pwd
+      become_user: awx
+      local_action:
+        module: pwd
+
