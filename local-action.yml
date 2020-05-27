@@ -11,5 +11,5 @@
     - name: pwd
       become_user: awx
       local_action:
-        module: pwd
+        module: shell pwd
 
