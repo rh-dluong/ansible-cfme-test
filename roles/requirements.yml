@@ -1,3 +1,2 @@
-- src: git@github.com:rh-dluong/example-role.git
-  scm: git
+- src: https://github.com/rh-dluong/example-role
   name: example-role
