@@ -1,0 +1,6 @@
+---
+- hosts: all
+  vars_files:
+    - "{{ playbook_dir }}/requirements_roles/example-role/defaults/vars.yml"
+  roles:
+    - example-role

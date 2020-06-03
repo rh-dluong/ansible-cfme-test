@@ -1,0 +1,18 @@
+---
+
+- hosts: localhost
+  gather_facts: false
+  connection: local
+  tasks:
+  - name: k8s login
+    k8s_auth:
+      host: https://api.cloudmgmt-ocp.gsslab.rdu2.redhat.com:6443
+      username: "{{ username }}"
+      password: "{{ password }}"
+      validate_certs: false
+    register: k8s_login
+
+  - name: get all pods
+    k8s_facts:
+      api_key: "{{ k8s_login.k8s_auth.api_key }}"
+      kind: Pod
