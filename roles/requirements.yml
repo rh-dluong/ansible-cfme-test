@@ -1,0 +1,2 @@
+- src: git@github.com:rh-dluong/example-role.git
+  name: example-role
