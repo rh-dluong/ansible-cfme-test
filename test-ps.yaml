@@ -6,6 +6,7 @@
     - ansible_connection: winrm
     - ansible_winrm_transport: ntlm
     - ansible_winrm_server_cert_validation: ignore
+    - logpath: test\
   tasks:
     - name: Copy script
       win_copy:
@@ -16,7 +17,7 @@
     - name: Run Script Block
       block:
         - name: Run Script
-          win_command: "powershell.exe -file c:\users\public\testps.ps1 -csv {{ csv }} -logpath {{ logpath }}"
+          win_command: powershell.exe -file c:\users\public\testps.ps1 -csv {{ csv }} -logpath "{{ logpath }}"
       always:
         - name: Remove Script
           win_file:
