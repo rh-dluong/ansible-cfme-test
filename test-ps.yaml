@@ -1,0 +1,21 @@
+---
+- name: Test Script
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: Copy script
+      win_copy:
+        src: "./testps.ps1"
+        dest: 'c:\users\public\'
+        remote_src: no
+
+    - name: Run Script Block
+      block:
+        - name: Run Script
+          win_command: "powershell.exe -file c:\users\public\testps.ps1 -csv {{ csv }} -logpath {{ logpath }}"
+      always:
+        - name: Remove Script
+          win_file:
+            path: 'c:\users\public\testps.ps1'
+            state: absent
