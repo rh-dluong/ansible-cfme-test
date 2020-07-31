@@ -18,7 +18,7 @@
       block:
         - name: Run Script
 #          script: c:\users\public\testps.ps1 -csv "{{ csv }}" -logpath "{{ logpath }}"
-          script: testps.ps1 -csv "testing" -logpath "logpath"
+          script: testps.ps1 -csv "testing with space" -logpath "logpath"
       always:
         - name: Remove Script
           win_file:
