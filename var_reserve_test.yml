@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Shell
+    shell: echo test
+    register: class 

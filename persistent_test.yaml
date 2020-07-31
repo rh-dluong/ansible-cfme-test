@@ -1,0 +1,7 @@
+---
+- hosts: tower-cfme.usersys.redhat.com
+  tasks:
+  - name: task 1
+    shell: sleep 60 
+  - name: task 2
+    shell: sleep 30
