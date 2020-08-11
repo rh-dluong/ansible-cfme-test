@@ -4,3 +4,4 @@
 #    - role: hello
   tasks:
   - shell: tree
+  - shell: pwd
