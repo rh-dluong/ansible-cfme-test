@@ -1,0 +1,33 @@
+{
+ "collection_info": {
+  "namespace": "irixjp",
+  "name": "sample_collection_hello",
+  "version": "1.0.0",
+  "authors": [
+   "Tomoaki Nakjaima <twitter@irix_jp>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "examples",
+   "collection"
+  ],
+  "description": "This is a sample collection",
+  "license": [
+   "Apache-2.0"
+  ],
+  "license_file": null,
+  "dependencies": {},
+  "repository": "https://github.com/irixjp/ansible-sample-collection-hello",
+  "documentation": "https://github.com/irixjp/ansible-sample-collection-hello/tree/master/docs",
+  "homepage": "https://github.com/irixjp/ansible-sample-collection-hello",
+  "issues": "https://github.com/irixjp/ansible-sample-collection-hello/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "4a9c0773b8c0424ac1dcd91194ffb8b9000096e5b2271835f4eceb5bf15de78f",
+  "format": 1
+ },
+ "format": 1
+}
