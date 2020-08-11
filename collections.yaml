@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  roles:
-    - role: hello
+#  roles:
+#    - role: hello
   tasks:
   - shell: tree
