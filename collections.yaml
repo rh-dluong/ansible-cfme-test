@@ -5,3 +5,4 @@
   tasks:
   - shell: tree
   - shell: pwd
+  - shell: "tree {{ playbook_dir }}"
