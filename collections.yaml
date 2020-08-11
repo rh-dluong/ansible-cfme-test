@@ -1,6 +1,6 @@
 ---
 - hosts: all
   roles:
-    - role: 'ansible_collections/irixjp/hello'
+    - role: 'collections/ansible_collections/irixjp/roles/hello'
   tasks:
   - shell: tree
