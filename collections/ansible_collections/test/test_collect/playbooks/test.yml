@@ -1,0 +1,12 @@
+---
+- hosts: all
+#  collections:
+#    - ../../../../../test.test_collect
+#    - test.test_collect
+  roles:
+    - test.test_collect.test_collect_role
+#    - test.test_collect.test_collect_role
+#/Projects/ansible-cfme-test/collections/ansible_collections/test/test_collect/playbooks
+#  tasks:
+#  - debug: 
+#      var: {{playbook_dir}}

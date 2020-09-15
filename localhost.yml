@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+  - name: "Installing AWS CLI to {{ playbook_dir }}/awscli/bin/aws"
+    block:
+      - name: "Creating '{{ playbook_dir }}/awscli'"
+        file:
+          path: "{{ playbook_dir }}/awscli"
+          state: directory
+          mode: "0755"

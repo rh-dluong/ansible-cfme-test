@@ -1,0 +1,6 @@
+---
+- hosts: all
+  collections:
+    - test.test_collect
+  roles:
+    - test_collect_role

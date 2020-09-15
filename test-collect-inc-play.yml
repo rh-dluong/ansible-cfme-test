@@ -1,0 +1,2 @@
+---
+- import_playbook: collections/ansible_collections/test/test_collect/playbooks/test.yml 
