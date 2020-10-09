@@ -1,0 +1,32 @@
+---
+- hosts: all
+#
+#
+  tasks:
+#
+#
+    - name: GATHER INSTALLED PACKAGES INFORMATION
+      package_facts:
+        manager: auto
+        strategy: all
+      ignore_errors: True
+#
+#
+    - name: SET FACT FOR PACKAGE NAME AND VERSION
+      set_fact:
+        mount_list: "{{ ansible_facts.mounts | map(attribute='fstype') | list}}"
+        package_list: "{{ ansible_facts.packages['NetworkManager'] }}"
+#        package_list: "{{ ansible_facts.packages | dict2items }}"
+#        package_list: "{{ ansible_facts.packages | map(attribute='name',' | list }}"
+        cacheable: yes
+      ignore_errors: True
+
+    - name: Debug mount
+      debug:
+        var: mount_list   
+    - name: Debug package
+      debug:
+        var: package_list
+#        var: package_list[0].value | map(attribute="version") | list
+#      loop:
+#        - "{{ package_list }}"
