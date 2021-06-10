@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+  - debug: 
+      var: "{{ inventory_hostname in groups['database'] | default([]) or (not groups['database'] | default([]) and ( inventory_hostname in groups['automationhub'] | default ([]) or inventory_hostname in groups ['tower'] | default([]) )) }}"
+#      var: "{{ inventory_hostname in groups['database'] | default([]) or (not groups['database'] | default([]) and ( inventory_hostname in groups['tower'] | default([]) or (inventory_hostname in groups['automationhub'] | default([]) and (groups['tower','automationhub'] is undefined or not groups['tower','automationhub'] | default([]) | length)))) }}"
+#      var: "{{ inventory_hostname in groups['database'] | default([]) or (inventory_hostname in groups['tower'] | default([]) or (inventory_hostname in groups['tower'] | default([]) or (inventory_hostname in groups['automationhub'] | default([]) and (groups['tower','automationhub'] is undefined or not groups['tower','automationhub'] | default([]) | length))) }}"
+#      var: "{{ inventory_hostname in groups['database'] | default([]) or (_do_run_db_install | default(false) | bool and not groups['database'] | default([]) | length) }}"

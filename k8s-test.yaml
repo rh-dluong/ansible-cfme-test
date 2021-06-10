@@ -1,0 +1,38 @@
+- hosts: localhost
+  gather_facts: false
+  vars:
+  - k8s_admin_password: yCioX-Pgssm-6wwVS-rRqZx
+  module_defaults:
+    community.kubernetes.k8s_auth:
+#      kubeconfig: "/home/dluong/Projects/lab-cred/nasa-acm21/auth/kubeconfig"
+      host:  "https://api.nasa-acm21.acm.support:6443"
+    community.kubernetes.k8s:
+      kubeconfig: "/home/dluong/Projects/lab-cred/nasa-acm21/auth/kubeconfig"
+      host:  "https://api.nasa-acm21.acm.support:6443"
+  tasks:
+  - block:
+    # It's good practice to store login credentials in a secure vault and not
+    # directly in playbooks.
+    - name: "Log in (obtain access token)"
+      community.kubernetes.k8s_auth:
+        username: kubeadmin
+        password: "{{ k8s_admin_password }}"
+      register: k8s_auth_results
+    # Previous task provides the token/api_key, while all other parameters
+    # are taken from module_defaults
+    - name: "Get a list of all pods from any namespace"
+      community.kubernetes.k8s_info:
+        api_key: "{{ k8s_auth_results.k8s_auth.api_key }}"
+        kind: Pod
+      register: pod_list
+    always:
+    - name: "If login succeeded, try to log out (revoke access token)"
+      when: k8s_auth_results.k8s_auth.api_key is defined
+      community.kubernetes.k8s_auth:
+        state: absent
+        api_key: "{{ k8s_auth_results.k8s_auth.api_key }}"
+   # module_defaults:
+   #   group/k8s:
+   #     host: https://api.ocp4.keights.org:6443
+   #     validate_certs: false
+

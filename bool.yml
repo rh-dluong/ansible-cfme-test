@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+  - set_fact: 
+      galaxy_require_content_approval: "{{ automationhub_require_content_approval|upper }}"
+  - debug:
+      var: galaxy_require_content_approval

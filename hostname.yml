@@ -1,0 +1,6 @@
+- hosts: tower:automationhub:database
+  tasks:
+  - debug:
+      msg: True
+    when:
+    - inventory_hostname in groups['tower'] | default([]) or (inventory_hostname in groups['automationhub'] | default([]) and (groups['tower','automationhub'] is undefined or not groups['tower','automationhub'] | default([]) | length))
