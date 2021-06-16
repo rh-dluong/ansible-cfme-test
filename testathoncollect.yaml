@@ -1,0 +1,18 @@
+---
+- name: Try a helm test with a collection
+  hosts: all
+  gather_facts: all
+  collections:
+    - kubernetes.core
+
+  tasks:
+
+    - name: Add stable chart repo
+      helm_repository:
+        name: stable
+        repo_url: "https://kubernetes.github.io/ingress-nginx"
+      register: test
+
+    - name: show me
+      debug:
+        var: test
