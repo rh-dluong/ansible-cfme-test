@@ -1,7 +1,6 @@
 ---
 - name: Try a helm test with a collection
   hosts: all
-  gather_facts: all
   collections:
     - kubernetes.core
 
