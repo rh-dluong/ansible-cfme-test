@@ -4,3 +4,5 @@
   tasks:
   - debug:
       var: ansible_user
+  - shell: echo "SUCCESS"
+    become_user: "{{ ansible_user }}"
