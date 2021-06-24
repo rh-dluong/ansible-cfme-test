@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  become: "{{ ansible_user }}"
+  become_user: "{{ ansible_env.SUDO_USER }}"
   tasks:
   - debug:
       var: ansible_user
