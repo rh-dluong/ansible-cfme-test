@@ -1,0 +1,14 @@
+---
+- hosts: all
+  tasks:
+  - name: Page if kernel is not correct after boot RHEL7
+    become: no
+    mail:
+      subject: "Success!"
+      body: "The mail has sent successfully"
+      to:
+      - David Luong <dluong@redhat.com>
+      charset: us-ascii
+    delegate_to: localhost
+    ignore_errors: true
+
