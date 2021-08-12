@@ -2,4 +2,5 @@
 localhost
 
 [ansible_source:vars]
-remote_tmp = '/var/tmp/remote'
+#remote_tmp = '/var/tmp/remote'
+
