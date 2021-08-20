@@ -2,7 +2,7 @@
 - hosts: localhost
   tasks:
   - name: Export all assets
-   awx.awx..tower_export:
+   awx.awx.tower_export:
       all: True
     register: export_output
 
