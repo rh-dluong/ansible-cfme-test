@@ -2,10 +2,10 @@
 - hosts: localhost
   tasks:
   - name: Export all assets
-    ansible.tower.tower_export:
+   awx.awx..tower_export:
       all: True
     register: export_output
 
   - name: Import all tower assets from our export
-    ansible.tower.tower_import:
-      assets: "{{ export_output.assets }}"
+    awx.awx.tower_import:
+      assets: "{{ export_output }}"

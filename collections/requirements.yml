@@ -1,4 +1,5 @@
 ---
 collections:
 - kubernetes.core
+- awx.awx
 #- src: https://github.com/rh-dluong/example-role
