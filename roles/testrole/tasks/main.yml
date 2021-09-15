@@ -2,4 +2,4 @@
 # tasks file for testrole
 # 
 - name: This command will change the working directory to somedi
-  ansible.builtin.shell: echo "What"
+  shell: echo "What"
