@@ -1,0 +1,5 @@
+---
+# tasks file for testrole
+# 
+- name: This command will change the working directory to somedir/ and will only run when somedir/somelog.txt doesn't exist
+  ansible.builtin.shell: echo "What"
