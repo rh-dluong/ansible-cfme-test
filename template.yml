@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+  - name: create json file
+    template: 
+      src: nice_yaml_filter.j2 
+      dest: /tmp/ams_health_check.json
+    delegate_to: 127.0.0.1
