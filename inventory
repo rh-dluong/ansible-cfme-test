@@ -1,3 +1,6 @@
+[raleigh]
+localhost
+
 [ansible_source]
 localhost
 

@@ -3,3 +3,19 @@
 # 
 - name: This command will change the working directory to somedi
   shell: echo "What"
+
+- name: Package with loop
+  package:
+    name: "{{ item }}"
+    state: present
+  become: true
+  loop:
+    - failme
+- name: Package without loop
+  package:
+    name: failme
+    state: present
+  become: true
+  tags:
+  - without_loop
+
