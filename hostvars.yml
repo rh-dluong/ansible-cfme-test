@@ -1,0 +1,13 @@
+---
+- hosts: raleigh
+  vars_files:
+  - secrets.yml
+  tasks:
+  - debug:
+      var: test
+  - debug:
+      var: testsecret
+  - debug:
+      var: hostvars['localhost']['hosttestsecret']
+  - debug:
+      var: hosttestsecret

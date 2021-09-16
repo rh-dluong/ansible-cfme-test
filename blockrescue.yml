@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Error block
+    block:
+#      - include_tasks:
+#          file: roles/testrole/tasks/main.yml
+      - include_tasks: 
+          file: usetestrole.yml
+    rescue:
+    - debug:
+        var: ansible_failed_task
