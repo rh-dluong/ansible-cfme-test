@@ -1,4 +1,4 @@
 ---
 - import_role:
     name: testrole
-
+  tags: test

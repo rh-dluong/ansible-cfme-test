@@ -1,6 +1,5 @@
 - name: Package with loop
   shell: "rpm -qa | grep {{ item }}"
-    state: present
   become: true
   loop:
     - failme

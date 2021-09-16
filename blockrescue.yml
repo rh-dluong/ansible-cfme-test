@@ -7,9 +7,11 @@
 #          file: roles/testrole/tasks/main.yml
       - include_tasks: 
           file: usetestrole.yml
+        tags:
+          - test
     rescue:
       - name: Record Failure Information
         set_fact:
           job_failure_info:
             failed_task: "{{ ansible_failed_task.name }}"
-
+        tags: always
