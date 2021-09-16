@@ -8,5 +8,8 @@
       - include_tasks: 
           file: usetestrole.yml
     rescue:
-    - debug:
-        var: ansible_failed_task
+      - name: Record Failure Information
+        set_fact:
+          job_failure_info:
+            failed_task: "{{ ansible_failed_task.name }}"
+
