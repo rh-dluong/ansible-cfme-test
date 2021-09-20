@@ -1,6 +1,14 @@
 - name: Package with loop
-  shell: "rpm -qa | grep {{ item }}"
-  become: true
-  loop:
-    - failme
+  block:
+  - name: Failloop
+    shell: "rpm -qa | grep {{ item }}"
+    become: true
+    loop:
+      - failme
+
+  always:
+
+    - name: debug
+      debug:
+        msg: "Done!"
 

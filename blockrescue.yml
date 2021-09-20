@@ -1,10 +1,19 @@
 ---
-- hosts: localhost
+- hosts: all 
   tasks:
   - name: Error block
     block:
 #      - include_tasks:
 #          file: roles/testrole/tasks/main.yml
+      - name:  "Command loop outside of role"
+        command: "{{ item }}"
+        become: true
+        loop:
+          - date
+          - this_should_fail
+        tags:
+          - task_test
+
       - include_tasks: 
           file: usetestrole.yml
         tags:
