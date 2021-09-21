@@ -2,5 +2,5 @@
 - hosts: all
   tasks:
   - shell: echo "Test"
-  - davids.collection.my_module:
+  - include_tasks: fake_collection.yml
   - shell: echo "Test done"

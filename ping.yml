@@ -1,4 +1,4 @@
 ---
 - hosts: all
   tasks:
-  - shell: "ping {{ ip }}"
+  - shell: "ping -c5 {{ ip }}"
