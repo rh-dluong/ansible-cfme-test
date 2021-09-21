@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+  - shell: echo "Test"
+  - davids.collection.my_module:
+  - shell: echo "Test done"
