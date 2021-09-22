@@ -3,7 +3,7 @@
   gather_facts: no
   environment:
     http_proxy: '18.216.94.161:3128'
-    https_proxy: '18.216.94.161:3128'
+#    https_proxy: '18.216.94.161:3128'
   tasks:
   - name: "Change ec2 instances to state: {{state}}"
     ec2:
