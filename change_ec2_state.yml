@@ -2,8 +2,8 @@
 - hosts: localhost
   gather_facts: no
   environment:
-    http_proxy: 'ec2-18-216-94-161.us-east-2.compute.amazonaws.com:3128'
-    https_proxy: 'ec2-18-216-94-161.us-east-2.compute.amazonaws.com:3128'
+#    http_proxy: 'ec2-18-216-94-161.us-east-2.compute.amazonaws.com:3128'
+#    https_proxy: 'ec2-18-216-94-161.us-east-2.compute.amazonaws.com:3128'
   tasks:
   - name: "Change ec2 instances to state: {{state}}"
     ec2:
