@@ -12,6 +12,6 @@
           Name: "dluong-ah"   
       region: "us-east-2"
       wait: yes
-      delegate_to: dluong-at
+    delegate_to: dluong-at
     register: instances
 
