@@ -6,7 +6,7 @@
 #    https_proxy: '18.216.94.161:3128'
   tasks:
   - name: "Change ec2 instances to state: {{state}}"
-    ec2:
+    amazon.aws.ec2:
       state: "stopped"
       instance_tags:
           Name: "dluong-delete"   
