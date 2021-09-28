@@ -13,5 +13,6 @@
       region: "us-east-2"
       wait: yes
     delegate_to: dluong-ah
+    delegate_facts: true
     register: instances
 
