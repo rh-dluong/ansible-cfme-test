@@ -2,6 +2,6 @@
 collections:
 - kubernetes.core
 - awx.awx
-- amazon.aws
+- name: amazon.aws
   version: 2.0.0
 #- src: https://github.com/rh-dluong/example-role
