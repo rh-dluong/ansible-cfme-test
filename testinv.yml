@@ -1,0 +1,9 @@
+---
+- hosts: raleigh
+  gather_facts: no
+  tasks:
+  - debug:
+      var: groups
+    run_once: true
+  - name: Ping
+    ping:

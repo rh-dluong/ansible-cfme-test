@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  become_user: root
+
+  tasks:
+      - name: Add repository
+        ansible.builtin.yum_repository:
+          name: fake-rpms
+          description: DELETE ME
+          file: delete_me_repo
+          baseurl: http://example.com/repo/
+          gpgcheck: no

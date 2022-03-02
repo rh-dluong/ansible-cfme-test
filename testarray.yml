@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  vars:
+  - test1: value1
+  - test2: value2
+  - test3: value3
+  tasks:
+  - debug:
+      var: item
+    loop: "{{test[1:3]}}"

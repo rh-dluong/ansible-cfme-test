@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: Create a k8s namespace
+    redhat.openshift.k8s:
+      name: dluong-testing
+      kind: Project
+      state: present
+      api_version: project.openshift.io/v1

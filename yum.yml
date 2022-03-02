@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: Remove packages
+    dnf:  
+      state: absent    
+      disable_gpg_check: yes
+      name:
+      - google-chrome-stable
+      - linphone
+    become: yes

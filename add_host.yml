@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  gather_facts: no
+  connection: local
+  tasks:
+  - add_host:
+      name: acm-ansible-controller.hosts.prod.psi.rdu2.redhat.com
+      groups: temp
+- hosts: temp
+  connection: ssh
+  tasks:
+  - command: hostname
