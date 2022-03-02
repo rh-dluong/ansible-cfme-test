@@ -1,7 +1,8 @@
 ---
 - hosts: all
   gather_facts: no
-  ansible_connection: local
+  vars:
+    - ansbile_connection: local 
   tasks:
   - debug:
       vars: groups['tower'][0]
