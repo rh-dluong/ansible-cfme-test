@@ -1,9 +1,18 @@
+localhost ansible_connection=local
 [raleigh]
 localhost
 
 [ansible_source]
 localhost
 
+[raleigh:children]
+webservers
+
+[webservers]
+test1
+test2
+
 [ansible_source:vars]
 #remote_tmp = '/var/tmp/remote'
-
+[all:vars]
+ansible_connection=local
