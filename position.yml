@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+  - debug:
+      vars: groups['tower'][0]
+    when: inventory_hostname is groups['tower'][0]
