@@ -5,5 +5,5 @@
     - ansbile_connection: local 
   tasks:
   - debug:
-      vars: groups['tower'][0]
+      var: groups['tower'][0]
 #    when: inventory_hostname is groups['tower'][0]
