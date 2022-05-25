@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: Create namespace for dummy namespace
+    k8s:
+      name: ansibleposthook
+      kind: Project
+      api_version: v1
+      state: present
+
