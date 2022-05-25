@@ -6,6 +6,6 @@
     k8s:
       name: ansibleposthook
       kind: Project
-      api_version: v1
+      api_version: project.openshift.io/v1
       state: present
 
