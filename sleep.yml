@@ -3,4 +3,4 @@
   gather_facts: no
   tasks:
   - name: sleep
-    shell: sleep 600
+    shell: sleep 3600
