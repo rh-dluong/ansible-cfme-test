@@ -1,0 +1,6 @@
+- hosts: localhost
+  tasks:
+  - name: export
+    ansible.controller.export:
+      workflow_job_templates: 'testwf'
+
