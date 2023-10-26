@@ -3,5 +3,5 @@
   - name: export
     ansible.controller.export:
       validate_certs: false
-      workflow_job_templates: ['testwf']
+      workflow_job_templates: 'testwf'
 
